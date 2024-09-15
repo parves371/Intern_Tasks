@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const LoginForm = ({ onLogin }) => {
+const Login = ({ onLogin }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
@@ -32,4 +32,4 @@ const LoginForm = ({ onLogin }) => {
   );
 };
 
-export default LoginForm;
+export default Login;
