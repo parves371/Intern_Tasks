@@ -1,4 +1,5 @@
 import {
+  DataArray,
   Home as HomeIcon,
   Logout as LogoutIcon,
   Menu as MenuIcon,
@@ -50,6 +51,11 @@ const Header = () => {
                 title="MultiStepFrom"
                 icon={<MultipleStopIcon />}
                 link={"/multistapfrom"}
+              />
+              <IconsBtn
+                title="cached  Data"
+                icon={<DataArray />}
+                link={"/cacheddata"}
               />
               <IconsBtn title="Logout" icon={<LogoutIcon />} />
             </Box>

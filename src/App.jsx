@@ -7,6 +7,7 @@ import { useSelector } from "react-redux";
 const Home = lazy(() => import("./pages/Home"));
 const Login = lazy(() => import("./pages/login"));
 const MultiFrom = lazy(() => import("./pages/MultiFrom"));
+const CachedData = lazy(() => import("./pages/CachedData"));
 
 const App = () => {
   // Access the isAuthenticated value from the auth slice in the Redux store
@@ -19,6 +20,7 @@ const App = () => {
           <Route element={<ProtectRoute user={isAuthenticated} />}>
             <Route path="/" element={<Home />} />
             <Route path="/multistapfrom" element={<MultiFrom />} />
+            <Route path="/cacheddata" element={<CachedData />} />
           </Route>
           <Route
             path="/login"
