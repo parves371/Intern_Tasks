@@ -44,8 +44,9 @@ const Header = () => {
             <Box>
               <IconsBtn title="Home" icon={<HomeIcon />} link={"/"} />
               <IconsBtn
-                title="Infinte Scroll"
+                title="coustom Hook"
                 icon={<ScreenSearchDesktopIcon />}
+                link={"/hook"}
               />
               <IconsBtn
                 title="MultiStepFrom"

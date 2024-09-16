@@ -8,6 +8,7 @@ const Home = lazy(() => import("./pages/Home"));
 const Login = lazy(() => import("./pages/login"));
 const MultiFrom = lazy(() => import("./pages/MultiFrom"));
 const CachedData = lazy(() => import("./pages/CachedData"));
+const Hook = lazy(() => import("./pages/Hook"));
 
 const App = () => {
   // Access the isAuthenticated value from the auth slice in the Redux store
@@ -21,6 +22,7 @@ const App = () => {
             <Route path="/" element={<Home />} />
             <Route path="/multistapfrom" element={<MultiFrom />} />
             <Route path="/cacheddata" element={<CachedData />} />
+            <Route path="/hook" element={<Hook />} />
           </Route>
           <Route
             path="/login"
