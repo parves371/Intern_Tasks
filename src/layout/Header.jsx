@@ -17,8 +17,15 @@ import {
 import React from "react";
 import { Link } from "react-router-dom";
 import { orange } from "../constants/color";
+import { handleLogout } from "../redux/reducers/authSlice";
+import { useDispatch } from "react-redux";
 
 const Header = () => {
+  const dispatch = useDispatch();
+  const logout = () => {
+    dispatch(handleLogout());
+    window.location.reload();
+  };
   return (
     <>
       <Box sx={{ flexFlow: "1" }} height={"4rem"}>
@@ -58,7 +65,7 @@ const Header = () => {
                 icon={<DataArray />}
                 link={"/cacheddata"}
               />
-              <IconsBtn title="Logout" icon={<LogoutIcon />} />
+              <IconsBtn title="Logout" icon={<LogoutIcon />} onClick={logout} />
             </Box>
           </Toolbar>
         </AppBar>
