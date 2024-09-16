@@ -3,7 +3,6 @@ import React from "react";
 import AppLayout from "../layout/AppLayout";
 import { Typography } from "@mui/material";
 import InfiniteScroll from "../components/specific/InfiniteScroll";
-import PostsList from "../components/specific/PostsList ";
 
 const Home = () => {
   return (
@@ -16,8 +15,6 @@ const Home = () => {
       </Typography>
 
       <InfiniteScroll />
-
-      {/* <PostsList /> */}
     </section>
   );
 };
