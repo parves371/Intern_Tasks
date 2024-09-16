@@ -1,4 +1,12 @@
 import React, { useState, useEffect, useRef, useCallback } from "react";
+import {
+  Box,
+  Typography,
+  CircularProgress,
+  List,
+  ListItem,
+  Divider,
+} from "@mui/material";
 import { fetchPosts } from "../../utils/helper";
 
 const InfiniteScroll = () => {
@@ -36,21 +44,50 @@ const InfiniteScroll = () => {
   );
 
   return (
-    <div className="overflow-scroll max-h-screen">
-      <h1 className="text-center text-2xl m-2">Your Feed</h1>
-      <ul>
+    <Box
+      sx={{
+        overflowY: "scroll",
+        maxHeight: "100vh",
+        p: 2,
+      }}
+    >
+      <Typography variant="h4" component="h1" align="center" gutterBottom>
+        Your Feed
+      </Typography>
+      <List>
         {posts.map((post, index) => (
-          <li
-            key={index}
-            ref={posts.length === index + 1 ? lastPostElementRef : null}
-          >
-            <h2>{post.title}</h2>
-            <p>{post.body}</p>
-          </li>
+          <div key={index}>
+            <ListItem
+              ref={posts.length === index + 1 ? lastPostElementRef : null}
+              sx={{
+                p: 2,
+                borderBottom: "1px solid",
+                borderColor: "divider",
+              }}
+            >
+              <Box sx={{ flex: 1 }}>
+                <Typography variant="h6" component="h2">
+                  {post.title}
+                </Typography>
+                <Typography variant="body1">{post.body}</Typography>
+              </Box>
+            </ListItem>
+            {index < posts.length - 1 && <Divider />}
+          </div>
         ))}
-      </ul>
-      {loading && <p>Loading...</p>}
-    </div>
+      </List>
+      {loading && (
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            mt: 2,
+          }}
+        >
+          <CircularProgress />
+        </Box>
+      )}
+    </Box>
   );
 };
 

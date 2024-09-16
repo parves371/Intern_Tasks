@@ -18,7 +18,7 @@ const App = () => {
         <Routes>
           <Route element={<ProtectRoute user={isAuthenticated} />}>
             <Route path="/" element={<Home />} />
-            <Route path="/multistapefrom" element={<MultiFrom />} />
+            <Route path="/multistapfrom" element={<MultiFrom />} />
           </Route>
           <Route
             path="/login"

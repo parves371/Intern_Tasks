@@ -1,12 +1,14 @@
 import { Grid } from "@mui/material";
 import React from "react";
+import Title from "../components/shared/Title";
+import Header from "./Header";
 
 const AppLayout = () => (WrappedComponent) => {
   return (props) => {
     return (
       <>
-        {/* <Title title="inter-Task" /> */}
-        {/* <Header /> */}
+        <Title title="inter-Task" />
+        <Header />
         <Grid container height={"calc(100vh - 4rem)"}>
           <Grid
             item

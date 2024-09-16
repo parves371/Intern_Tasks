@@ -1,16 +1,1 @@
 for login server use   // json-server --watch db.json --port 5000
-
-
-
-and for infinite server // json-server --watch infinite.json --port 5000
-
-Key Points for infinite: 
-useInView: From "react-intersection-observer" detects when the bottom of the list is in the viewport.
-
-State management:
-items: Stores the list of fetched items
-page: Tracks the current page to fetch.
-hasMore: Tracks whether there are more items to fetch.
-isLoading: Shows a loading spinner while data is being fetched.
-API call: Fetches paginated data from the backend using axios and updates the list of items.
-
