@@ -10,5 +10,12 @@ const validateEmail = (email) => {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return emailRegex.test(email);
 };
+const fetchPosts = async (page, limit) => {
+  const response = await fetch(
+    `https://jsonplaceholder.typicode.com/posts?_page=${page}&_limit=${limit}`
+  );
+  const data = await response.json();
+  return data;
+};
 
-export { validatePasswordStrength, validateEmail };
+export { validatePasswordStrength, validateEmail, fetchPosts };

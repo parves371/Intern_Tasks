@@ -1,11 +1,12 @@
+import { Grid } from "@mui/material";
 import React from "react";
 
 const AppLayout = () => (WrappedComponent) => {
   return (props) => {
     return (
       <>
-        <Title title="TalkWave" />
-        <Header />
+        {/* <Title title="inter-Task" /> */}
+        {/* <Header /> */}
         <Grid container height={"calc(100vh - 4rem)"}>
           <Grid
             item
@@ -13,6 +14,7 @@ const AppLayout = () => (WrappedComponent) => {
             md={3}
             sx={{ display: { sx: "none", sm: "block" } }}
             height={"100%"}
+            backgroundColor={"#121212"}
           >
             {/* left side */}
           </Grid>
